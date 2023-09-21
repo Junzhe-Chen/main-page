@@ -131,7 +131,8 @@ nav .fa {
   right: 0;
 }
 
-@media (max-width: 770px) { /*The purpose of changing this is to fold the navbar at the moment it cannot be displayed in a single line*/
+@media (max-width: 810px) {
+  /*The purpose of changing this is to fold the navbar at the moment it cannot be displayed in a single line*/
   .typewriter {
     width: 30ch;
     animation: none;

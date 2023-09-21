@@ -1,6 +1,5 @@
 /* Please the style of this CSS is a little bit inconsistent with the main CSS, need to change to the same style later */
 
-
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@300&display=swap);
 
@@ -11,6 +10,8 @@
 }
 
 .header {
+  min-height: 100vh;
+  width: 100%;
   z-index: 1;
   position: fixed;
   width: 100%;
@@ -18,55 +19,41 @@
 
 .section {
   min-height: 100vh;
-
   width: 100%;
-
   background-image: none; /*Fixed the overlapping image*/
-
   background-position: center;
-
   background-size: cover;
 }
 
 nav {
   background-color: #2e2e2e;
-
   color: white;
-
   display: flex;
-
   padding: 1% 6%;
-
   justify-content: space-between;
-
   align-items: center;
+  position: sticky; /* Add this line */
+  top: 0; /* Add this line */
+  z-index: 1000; /* Add this line */
 }
 
 .nav-logo a {
   font-size: 2.3vh;
-
   font-family: "Roboto Slab", serif;
-
   text-decoration: none;
-
   color: inherit;
 }
 
 .nav-links {
   flex: 1;
-
   text-align: right;
 }
 
 .nav-links ul li {
   list-style: none;
-
   display: inline-block;
-
   padding: 8px 20px;
-
   position: relative;
-
   font-family: "Roboto", sans-serif;
 }
 
@@ -76,9 +63,7 @@ nav {
 
 .nav-links ul li a {
   color: inherit;
-
   text-decoration: none;
-
   font-size: 2.2vh;
 }
 
@@ -170,6 +155,9 @@ nav {
   font-size: 2.5vw;
 }
 
+/* There is a bug about this part, when it shrinks to the certain amount
+the navbar will simply disappear. I did not find the codes that are 
+responsible for the navbar yet. */
 @media (max-width: 810px) {
   /*The purpose of changing this is to fold the navbar at the moment it cannot be displayed in a single line*/
   .typewriter {

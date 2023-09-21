@@ -20,9 +20,9 @@
           <div class="nav-links">
             <ul>
               <li><a href="index.html">Home</a></li>
-                    <li><a href="annoucements.html">Announcements</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contacts</a></li>
+              <li><a href="annoucements.html">Announcements</a></li>
+              <li><a href="">Projects</a></li>
+              <li><a href="">Contacts</a></li>
             </ul>
           </div>
         </nav>
@@ -56,5 +56,18 @@
         <h4 id="linktxt" href="">Link to the project</h4>
       </u>
     </section>
+    <script>
+      function showMenu() {
+          var navLinks = document.getElementById('nav-Links');
+          if (!navLinks.classList.contains('show')) { 
+              navLinks.style.right = "0";
+              navLinks.classList.add('show');
+          } else { 
+              navLinks.style.right = "-200%";
+              navLinks.classList.remove('show');
+          }
+      }
+
+  </script>
   </body>
 </html>
